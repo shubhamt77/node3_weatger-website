@@ -17,7 +17,7 @@ const forecast=(latitude,longitude,callback)=>{
         }else if(body.error){
             callback('unable to connect weather-app',undefined)
         }else{
-          callback(undefined,body.daily.data[0].summary+' it is currently '+body.currently.temperature+' degree out. there is a '+body.currently.precipProbability+' chance of rain')
+          callback(undefined,body.daily.data[0].summary+' it is currently '+body.currently.temperature+' degree out. today maximum temperature will be '+body.daily.data[0].temperatureHigh+' and minimum temperature will be '+ body.daily.data[0].temperatureLow +' there is a '+body.currently.precipProbability+' chance of rain')
   
         }
     })
